@@ -19,12 +19,12 @@ pipeline {
          parallel{
            stage ('Deploy to Staging'){
              steps {
-               sh "cp **/target/*.war /home/govorun/programms/tomcat-staging/webapps"
+               sh "cp **/target/*.war /home/govorun/Рабочий стол/apache-tomcat-9.0.64/webapps"
              }
            }
            stage ('Deploy to prod') {
              steps {
-               sh "cp **/target/*.war /home/govorun/programms/tomcat-prod/webapps"
+               sh "cp **/target/*.war /home/govorun/Рабочий стол/apache-tomcat-v2/webapps"
              }     
            }
          }
